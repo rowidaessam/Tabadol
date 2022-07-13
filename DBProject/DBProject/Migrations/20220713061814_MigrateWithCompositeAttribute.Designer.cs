@@ -4,6 +4,7 @@ using DBProject.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DBProject.Migrations
 {
     [DbContext(typeof(TabadolContext))]
-    partial class TabadolContextModelSnapshot : ModelSnapshot
+    [Migration("20220713061814_MigrateWithCompositeAttribute")]
+    partial class MigrateWithCompositeAttribute
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

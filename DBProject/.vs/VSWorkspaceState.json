@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DBProject",
-    "\\DBProject\\Data",
-    "\\DBProject\\Migrations",
-    "\\DBProject\\Models"
+    "\\DBProject"
   ],
-  "SelectedNode": "\\DBProject\\Data\\TabadolContext.cs",
+  "SelectedNode": "\\DBProject.sln",
   "PreviewInSolutionExplorer": false
 }

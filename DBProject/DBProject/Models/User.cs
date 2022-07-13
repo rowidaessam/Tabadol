@@ -1,14 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
+﻿
 namespace DBProject.Models
 {
     public class User
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
         public int UserId { get; set; }
+
+        [Required(ErrorMessage = "Enter The Number Of Exchange Please !! ")]
         public int NumberOfExchanges { get; set; }
+
+        [Required(ErrorMessage = "Enter Your Points Please !! ")]
         public int Points { get; set; }
+
         [Required(ErrorMessage = "Please Choose User Image")]
         [Display(Name = "Profile Picture")]
         [NotMapped]

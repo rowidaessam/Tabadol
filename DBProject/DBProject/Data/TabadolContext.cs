@@ -1,6 +1,4 @@
-﻿using DBProject.Models;
-using Microsoft.EntityFrameworkCore;
-
+﻿
 namespace DBProject.Data
 {
     public class TabadolContext:DbContext

@@ -1,16 +1,30 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
+﻿
 namespace DBProject.Models
 {
     public class Product
     {
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductID { get; set; }
+
+        [Required(ErrorMessage = "Enter Your Product Name Please !! ")]
+        [StringLength(50)]
+        [Display(Name = "Product Name ")]
         public string ProductName { get; set; }
+
+        [Required(ErrorMessage = "Enter Your Points Please !! ")]
         public int Points { get; set; }
+
+        [Required(ErrorMessage = "Enter Your Quantity Please !! ")]
+        [Display(Name = "Quantity Per Unit")]
         public int QuantityPerUnit { get; set; }
+
+        [Required(ErrorMessage ="Enter Product Description please !! ")]
+        [StringLength(200, MinimumLength = 20)]
+        [Display(Name = "Product Description")]
         public string ProductDescription { get; set; }
+
+        [Required(ErrorMessage = "Enter Units on Order please !! ")]
         public int UnitsOnOrder { get; set; }
 
         [Required(ErrorMessage = "Please Choose Product Image")]
